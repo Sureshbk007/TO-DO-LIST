@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: #18122b;
+}
+
+.wrapper {
+    height: 80vh;
+    width: 50vh;
+    background-color: #443c68;
+    border-radius: 10px;
+    margin: 50px auto 0px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    padding: 10px 10px 0 10px;
+}
+
+.heading h1 {
+    color: white;
+    font-size: 20px;
+}
+
+.heading .search {
+    display: flex;
+    margin: 20px 5px;
+    justify-content: center;
+}
+
+.heading #search-box {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 8px 0 0 8px;
+}
+
+.heading #add-btn {
+    padding-inline: 15px;
+    border-radius: 0 8px 8px 0;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+#add-btn:hover {
+    opacity: 80%;
+}
+
+.wrapper .list-items {
+    width: 100%;
+    color: white;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.wrapper .list-items::-webkit-scrollbar {
+    display: none;
+}
+
+.list-items li {
+    padding-right: 30px;
+    margin: 15px 10px 0 40px;
+    position: relative;
+    user-select: none;
+}
+
+li.checked {
+    text-decoration: line-through rgb(151, 18, 18);
+    text-decoration-thickness: 4px;
+}
+
+li span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+span::after {
+    content: "x";
+}
+
+li span:hover {
+    background-color: rgba(128, 128, 128, 0.438);
+}
+
+@media only screen and (width<=768px) {
+    .wrapper {
+        max-width: 35vh;
+        max-height: 70vh;
+    }
+}
