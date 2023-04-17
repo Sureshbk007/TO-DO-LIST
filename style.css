@@ -99,7 +99,7 @@ li span:hover {
 
 @media only screen and (width<=768px) {
     .wrapper {
-        max-width: 35vh;
+        min-width: 320px;
         max-height: 70vh;
     }
 }
